@@ -1,3 +1,6 @@
 {
-  "name" : "daChat"
+  "name" : "daChat",
+  "scripts" : {
+    "start" : "node app.js"
+  }
 }
