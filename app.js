@@ -1,6 +1,5 @@
-var express = require('express');
-var app     = express();
-var server  = app.listen(3030);
-var homeController = require("./controllers/home")
+// Start Server
+require('./services/server').start();
 
-app.get('/', homeController.index);
+// Load routes
+require('./routes');
