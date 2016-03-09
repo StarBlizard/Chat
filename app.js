@@ -1,7 +1,6 @@
 var express = require('express');
 var app     = express();
 var server  = app.listen(3030);
+var homeController = require("./controllers/home")
 
-app.get('/', function(req, res){
-  res.status(200).send('Hello');
-});
+app.get('/', homeController.index);
