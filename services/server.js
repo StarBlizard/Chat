@@ -1,5 +1,6 @@
 var Server        = require('http').Server;
 var express       = require('express');
+var bodyParser    = require('body-parser');
 var configuration = require('../config/configuration');
 
 module.exports = {
@@ -10,6 +11,9 @@ module.exports = {
 
     this.server  = new Server();
     this.app     = express(this.server);
+
+    this.app.use(bodyParser.json());                         // for parsing application/json
+    this.app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
     // Use custom middleware
     this.app.use(function(req, res, next){

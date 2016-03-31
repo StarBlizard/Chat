@@ -16,3 +16,6 @@ app.get('/landing', homeController.landing);
 
 // Users
 app.get('/users',  userController.show);
+
+// Example
+app.post('/foo', userController.foo);
